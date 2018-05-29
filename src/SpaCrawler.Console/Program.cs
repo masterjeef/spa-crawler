@@ -1,4 +1,4 @@
-﻿namespace SpaCrawler.Console
+﻿namespace SpaCrawler.ConsoleApp
 {
     public class Program
     {

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaCrawler.Console", "src\SpaCrawler.Console\SpaCrawler.Console.csproj", "{0601520C-D510-4FA2-94A9-9A3FEC5138D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaCrawler.ConsoleApp", "src\SpaCrawler.Console\SpaCrawler.ConsoleApp.csproj", "{0601520C-D510-4FA2-94A9-9A3FEC5138D1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaCrawler.Framework", "src\SpaCrawler.Framework\SpaCrawler.Framework.csproj", "{D5413692-4583-4637-B84F-3A8F085AD528}"
 EndProject

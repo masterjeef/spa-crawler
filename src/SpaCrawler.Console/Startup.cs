@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 using PuppeteerSharp;
 
-namespace SpaCrawler.Console
+namespace SpaCrawler.ConsoleApp
 {
     public static class Startup
     {
@@ -15,25 +15,25 @@ namespace SpaCrawler.Console
                 Headless = true
             };
 
-            System.Console.WriteLine("Downloading chromium");
+            Console.WriteLine("Downloading chromium");
             await Downloader.CreateDefault().DownloadRevisionAsync(Downloader.DefaultRevision);
 
             var uri = "http://localhost:5555";
-            System.Console.WriteLine($"Navigating to {uri}");
+            Console.WriteLine($"Navigating to {uri}");
             using (var browser = await Puppeteer.LaunchAsync(options, Downloader.DefaultRevision))
             using (var page = await browser.NewPageAsync())
             {
                 await page.GoToAsync(uri);
 
                 var content = await page.GetContentAsync();
-                System.Console.WriteLine($"page content: {content}");
+                Console.WriteLine($"page content: {content}");
 
                 var path = Path.Combine(Directory.GetCurrentDirectory(), $"{Guid.NewGuid()}.pdf");
                 await page.PdfAsync(path);
             }
 
-            System.Console.WriteLine("Press enter to quit:");
-            System.Console.Read();
+            Console.WriteLine("Press enter to quit:");
+            Console.Read();
         }
     }
 }
